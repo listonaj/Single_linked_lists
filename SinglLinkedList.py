@@ -1,7 +1,3 @@
-#   Created by Elshad Karimov on 27/04/2020.
-#   Copyright © 2020 AppMillers. All rights reserved.
-#   1. we create a blank head reference and blank back head 
-#      reference and intialize them with nul.
 
 class Node:
     def __init__(self, value=None):
@@ -10,6 +6,9 @@ class Node:
 
 class SLinkedList:
     def __init__(self):
+        # to create a linked list,
+        # initialize head and tail nodes with null. 
+        # The head point to the first node and the tail to the last
         self.head = None
         self.tail = None
     def __iter__(self):
@@ -18,32 +17,6 @@ class SLinkedList:
             yield node
             node = node.next
     # insert in Linked List
-    # def insertSLL(self, value, location):
-    #     newNode = Node(value)
-    #     if self.head is None:
-    #         self.head = newNode
-    #         self.tail = newNode
-    #     else:
-    #         if location == 0:
-    #             newNode.next = self.head
-    #             self.head = newNode
-    #         elif location == -1:
-    #             newNode.next = None
-    #             self.tail.next = newNode
-    #             self.tail = newNode
-    #         else:
-    #             tempNode = self.head
-    #             index = 0
-    #             while index < location - 1:
-    #                 if tempNode.next == None:
-    #                     break 
-    #                 tempNode = tempNode.next
-    #                 index += 1
-    #             nextNode = tempNode.next
-    #             tempNode.next = newNode
-    #             newNode.next = nextNode
-    #             if tempNode == self.tail:
-    #                 self.tail=newNode
     def insertSLL(self, value, location):
             newNode = Node(value)
             if self.head is None:
@@ -129,30 +102,7 @@ class SLinkedList:
             self.tail = None
 
 
-singlyLinkedList = SLinkedList()
-# singlyLinkedList.insertSLL(1, 1)
-# singlyLinkedList.insertSLL(2, 3)
-# singlyLinkedList.insertSLL(3, 1)
-# singlyLinkedList.insertSLL(4, 1)
-# singlyLinkedList.insertSLL(0, 0)
-# singlyLinkedList.insertSLL(7, -1)
-# singlyLinkedList.insertSLL(5, 6)
 
-
-# singlyLinkedList.insertSLL(1,1)
-# singlyLinkedList.insertSLL(2,5)
-# singlyLinkedList.insertSLL(3,1)
-# singlyLinkedList.insertSLL(4,9)
-# singlyLinkedList.insertSLL(5,-1)
-singlyLinkedList.insertSLL(1, 1)
-singlyLinkedList.insertSLL(2, 1)
-singlyLinkedList.insertSLL(3, 1)
-singlyLinkedList.insertSLL(4, 1)
-singlyLinkedList.insertSLL(5,-1)
-
-print([node.value for node in singlyLinkedList]) 
-# singlyLinkedList.deleteEntireSLL()
-# print([node.value for node in singlyLinkedList]) 
 
 
 
