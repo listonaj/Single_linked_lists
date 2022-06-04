@@ -87,22 +87,31 @@ class SLinkedList:
             # we print a statement that says so.
             return "The value does not exist in this list"
 
-    #  Delete a node from Singly Linked List
+    #  DELETING NODE TAKES ONE PARAMETER BESIDE SELF
     def deleteNode(self, location):
+        # LIST IS EMPTY
         if self.head is None:
             print("The SLL does not exist")
         else:
+            #DELETE FIRST NODE IN THE LIST
             if location == 0:
+                # ONLY ONE NODE IN THE LIST UPDATE TAIL REF
                 if self.head == self.tail:
                     self.head = None
                     self.tail = None
+                # MORE THAN ONE NODE IN THE LIST
                 else:
                     self.head = self.head.next
-            elif location == -1:
+            # DELETE THE LAST NODE FOR THE LIST
+            elif location == 1:
+                #ONLY ONE NODE IN THE LIST
                 if self.head == self.tail:
                     self.head = None
                     self.tail = None
+                #OVERWISE TRAVERSE THE LIST
                 else:
+                    # CREATE A DUMMY NODE THAT TAKE THE VALUE OF THE NODE BEFORE THE ONE
+                    #  WE ARE LOOKING TO DELETE 
                     node = self.head
                     while node is not None:
                         if node.next == self.tail:
@@ -110,15 +119,20 @@ class SLinkedList:
                         node = node.next
                     node.next = None
                     self.tail = node
+            #DELETE FROM ANY LOCATION
             else:
+                #CREATE ANOTHER DUMMY NODE TO TRAVERSE THE LIST
                 tempNode = self.head
                 index = 0
+                #LOOP IN THE LIST
                 while index < location - 1:
                     tempNode = tempNode.next
+                    # ITERATE IN THE LIST
                     index += 1
+                #WE DELETE THE CONNECTION BETWEEN CURRENT NODE AND NEXT NODE
                 nextNode = tempNode.next
                 tempNode.next = nextNode.next
-    # Delete entire SLL
+    # DELETE THE COMPLETE LINKED LIST
     def deleteEntireSLL(self):
         if self.head is None:
             print("The SLL does not exist")

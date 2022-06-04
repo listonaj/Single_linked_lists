@@ -24,3 +24,17 @@ my_list.traverseSLL()
 # TESTING THE SEARSH METHOD
 print("\nI AM TESTING THE 'SEARSH METHOD' TO FIND THE ELEMENT WITH THE VALUE '23' IN THE LINKED LIST")
 my_list.searchLL(23)
+
+
+#TESTING DELETE METHOD BY DELETING ELEMENT AT FIRST LOCATION (NODE WITH VALUE 23)
+my_list.deleteNode(0)
+print([node.value for node in my_list])
+
+#TESTING DELETE METHOD BY DELETING ELEMENT AT LAST LOCATION (NODE WITH VALUE 4)
+my_list.deleteNode(1)
+print([node.value for node in my_list])
+
+#TESTING DELETE METHOD BY DELETING ELEMENT AT THIRD LOCATION (NODE WITH VALUE 2)
+my_list.deleteNode(2)
+print([node.value for node in my_list])
+
