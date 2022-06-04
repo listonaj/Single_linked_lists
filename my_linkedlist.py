@@ -10,4 +10,7 @@ my_list.insertLL(4,1)
 #I want to insert the value 23 at the begining of the linked list
 my_list.insertLL(23,0)
 
+# we choose thelocation : value 15 inserted in at the 3rd position
+my_list.insertLL(15,2)
+
 print([node.value for node in my_list])

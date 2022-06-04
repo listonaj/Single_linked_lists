@@ -13,6 +13,7 @@ class SLinkedList:
             yield node
             node = node.next
     
+    # the method take two parameter the value and the location ever 0 or 1 or none 
     def insertLL(self, value, location):
             newNode = Node(value)
             #1) case where the list is empty
@@ -41,7 +42,7 @@ class SLinkedList:
                     newNode.next = nextNode
                     if tempNode == self.tail:
                         self.tail=newNode
-                        
+
     # Traverse Singly Linked List
     def traverseSLL(self):
         if self.head is None:
