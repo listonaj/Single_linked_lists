@@ -1,3 +1,5 @@
+#   Created by Elshad Karimov on 27/04/2020.
+#   Copyright © 2020 AppMillers. All rights reserved.
 
 class Node:
     def __init__(self, value=None):
@@ -6,9 +8,6 @@ class Node:
 
 class SLinkedList:
     def __init__(self):
-        # to create a linked list,
-        # initialize head and tail nodes with null. 
-        # The head point to the first node and the tail to the last
         self.head = None
         self.tail = None
     def __iter__(self):
@@ -16,7 +15,7 @@ class SLinkedList:
         while node:
             yield node
             node = node.next
-    # insert in Linked List
+    
     def insertSLL(self, value, location):
             newNode = Node(value)
             if self.head is None:
@@ -102,7 +101,30 @@ class SLinkedList:
             self.tail = None
 
 
+singlyLinkedList = SLinkedList()
+# singlyLinkedList.insertSLL(1, 1)
+# singlyLinkedList.insertSLL(2, 3)
+# singlyLinkedList.insertSLL(3, 1)
+# singlyLinkedList.insertSLL(4, 1)
+# singlyLinkedList.insertSLL(0, 0)
+# singlyLinkedList.insertSLL(7, -1)
+# singlyLinkedList.insertSLL(5, 6)
 
+
+# singlyLinkedList.insertSLL(1,1)
+# singlyLinkedList.insertSLL(2,5)
+# singlyLinkedList.insertSLL(3,1)
+# singlyLinkedList.insertSLL(4,9)
+# singlyLinkedList.insertSLL(5,-1)
+singlyLinkedList.insertSLL(1, 1)
+singlyLinkedList.insertSLL(2, 1)
+singlyLinkedList.insertSLL(3, 1)
+singlyLinkedList.insertSLL(4, 1)
+singlyLinkedList.insertSLL(5,-1)
+
+print([node.value for node in singlyLinkedList]) 
+# singlyLinkedList.deleteEntireSLL()
+# print([node.value for node in singlyLinkedList]) 
 
 
 
