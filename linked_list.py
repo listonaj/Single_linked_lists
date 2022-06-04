@@ -15,17 +15,21 @@ class SLinkedList:
     
     def insertLL(self, value, location):
             newNode = Node(value)
+            #1) case where the list is empty
             if self.head is None:
                 self.head = newNode
                 self.tail = newNode
+            #2) case where we insert in the first position in the list
             else:
                 if location == 0:
                     newNode.next = self.head
                     self.head = newNode
-                elif location == -1:
+            #3) case where we insert in the last position in the list
+                elif location == 1:
                     newNode.next = None
                     self.tail.next = newNode
                     self.tail = newNode
+            #4) insert in the middle of the list
                 else:
                     tempNode = self.head
                     index = 0
@@ -37,6 +41,7 @@ class SLinkedList:
                     newNode.next = nextNode
                     if tempNode == self.tail:
                         self.tail=newNode
+                        
     # Traverse Singly Linked List
     def traverseSLL(self):
         if self.head is None:
