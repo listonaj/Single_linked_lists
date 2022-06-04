@@ -38,3 +38,6 @@ print([node.value for node in my_list])
 my_list.deleteNode(2)
 print([node.value for node in my_list])
 
+#TESTING DELETING THE LIST
+my_list.deleteLL()
+print([node.value for node in my_list])

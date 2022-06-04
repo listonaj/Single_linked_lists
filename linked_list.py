@@ -133,9 +133,12 @@ class SLinkedList:
                 nextNode = tempNode.next
                 tempNode.next = nextNode.next
     # DELETE THE COMPLETE LINKED LIST
-    def deleteEntireSLL(self):
+    def deleteLL(self):
+        #WE CHECK IF LIST EXISTS
         if self.head is None:
-            print("The SLL does not exist")
+            print("There is no list")
+
+        #change reference from head and tail to Null
         else:
             self.head = None
             self.tail = None
