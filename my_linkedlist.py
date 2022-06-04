@@ -18,5 +18,9 @@ my_list.insertLL(15,2)
 print([node.value for node in my_list])
 
 # TESTING THE TRAVERSE FUNCTION
-print("TESTING THE TRAVERSE METHOD ")
+print("\nTESTING THE TRAVERSE METHOD ")
 my_list.traverseSLL()
+
+# TESTING THE SEARSH METHOD
+print("\nI AM TESTING THE 'SEARSH METHOD' TO FIND THE ELEMENT WITH THE VALUE '23' IN THE LINKED LIST")
+my_list.searchLL(23)
