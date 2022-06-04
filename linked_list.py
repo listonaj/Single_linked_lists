@@ -20,17 +20,17 @@ class SLinkedList:
             if self.head is None:
                 self.head = newNode
                 self.tail = newNode
-            #2) case where we insert in the first position in the list
+            #2) case where we insert a node at the first position in the list
             else:
                 if location == 0:
                     newNode.next = self.head
                     self.head = newNode
-            #3) case where we insert in the last position in the list
+            #3) case where we insert a node in the last position in the list
                 elif location == 1:
                     newNode.next = None
                     self.tail.next = newNode
                     self.tail = newNode
-            #4) insert in the middle of the list
+            #4) insert in a specific position in the linked list
                 else:
                     tempNode = self.head
                     index = 0
