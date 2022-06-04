@@ -14,7 +14,7 @@ my_list.insertLL(23,0)
 
 # we choose thelocation : value 15 inserted in at the 3rd position
 my_list.insertLL(15,2)
-
+print("AFTER HAVING INSERTED SOME ELEMENTS IN THE LINKED LIST, I PRINT ITS CONTENT")
 print([node.value for node in my_list])
 
 # TESTING THE TRAVERSE FUNCTION
