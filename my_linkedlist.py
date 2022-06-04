@@ -1,6 +1,8 @@
 from linked_list import *
 
+# CREATE A NEW INSTANCE OF THE CLASS LINKED LIST
 my_list = SLinkedList()
+
 # add some values, each insert at the end of the list using the the 1 value 
 my_list.insertLL(1,1)
 my_list.insertLL(2,1)
@@ -14,3 +16,7 @@ my_list.insertLL(23,0)
 my_list.insertLL(15,2)
 
 print([node.value for node in my_list])
+
+# TESTING THE TRAVERSE FUNCTION
+print("TESTING THE TRAVERSE METHOD ")
+my_list.traverseSLL()

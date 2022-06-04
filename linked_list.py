@@ -43,14 +43,20 @@ class SLinkedList:
                     if tempNode == self.tail:
                         self.tail=newNode
 
-    # Traverse Singly Linked List
+    # Traverse the linked list
     def traverseSLL(self):
+        # no head in the list  -> means no list 
         if self.head is None:
             print("The Singly Linked List does not exist")
+        # we can traverse 
         else:
+            # we create a temp node that we evaluate being the head
             node = self.head
+            # if it is none means we arrive at the end of the list
             while node is not None:
+                # we print the value of the node 
                 print(node.value)
+                # we iterate in the linked list using next
                 node = node.next
     # Search for a node in Singly Linked List
     def searchSLL(self, nodeValue):
